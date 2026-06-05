@@ -28,11 +28,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      # SPA routing fix: GitHub Pages returns 404 for unknown paths.
-      # Copying index.html as 404.html makes all routes fall back to the SPA.
-      - name: Copy index.html as 404.html (SPA routing fix)
-        run: cp dist/index.html dist/404.html
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

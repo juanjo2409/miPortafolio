@@ -45,7 +45,7 @@ export const projects = [
         description: "Galería responsive creada con HTML y CSS usando Flexbox y Grid. Diseño moderno con animaciones y hover effects.",
         tech: ["HTML", "CSS", "Flexbox", "Grid"],
         githubUrl: "https://github.com/juanjo2409",
-        demoUrl: "/mascotas",
+        demoUrl: null,
         featured: false,
     },
 ];

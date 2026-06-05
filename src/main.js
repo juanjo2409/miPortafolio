@@ -1,4 +1,9 @@
 import "./styles/global.css";
-import { initRouter } from "./router/router.js";
+import { renderHome, setupHome } from "./views/home.js";
 
-initRouter();
+const app = document.getElementById("app");
+if (app) {
+    app.innerHTML = renderHome();
+    setupHome();
+}
+

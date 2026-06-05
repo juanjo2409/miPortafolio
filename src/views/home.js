@@ -285,7 +285,7 @@ function setupScrollReveal() {
 }
 
 function setupHashNavigation() {
-    // Handle hash-based smooth scroll on SPA navigation
+    // Handle hash-based smooth scroll on page load
     const hash = window.location.hash;
     if (hash) {
         setTimeout(() => {
@@ -294,18 +294,52 @@ function setupHashNavigation() {
         }, 80);
     }
 
-    // Intercept /#section links
-    document.querySelectorAll('a[href^="/#"]').forEach(link => {
+    // Intercept hash links for smooth scroll
+    document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(link => {
         link.addEventListener("click", (e) => {
             e.preventDefault();
-            const sectionId = link.getAttribute("href").replace("/#", "");
+            const href = link.getAttribute("href");
+            const sectionId = href.startsWith("/#") ? href.replace("/#", "") : href.replace("#", "");
             const section = document.getElementById(sectionId);
             if (section) {
                 section.scrollIntoView({ behavior: "smooth" });
+                // Update URL hash without jumping
+                window.history.pushState(null, null, `#${sectionId}`);
             }
             // Close mobile nav if open
             const mobileNav = document.getElementById("mobile-nav");
             if (mobileNav) mobileNav.classList.remove("open");
+        });
+    });
+
+    // Scrollspy: update navbar active state based on current scroll position
+    const sections = document.querySelectorAll("main section");
+    const navLinks = document.querySelectorAll("nav a, #mobile-nav a");
+
+    window.addEventListener("scroll", () => {
+        let currentSectionId = "inicio";
+        const scrollPosition = window.scrollY + 150;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute("href");
+            const isMatch = href === `#${currentSectionId}` || href === `/#${currentSectionId}`;
+            if (isMatch) {
+                link.classList.add("text-violet-400");
+                link.classList.remove("text-slate-300");
+            } else {
+                link.classList.remove("text-violet-400");
+                if (!link.classList.contains("btn-ghost")) {
+                    link.classList.add("text-slate-300");
+                }
+            }
         });
     });
 }
