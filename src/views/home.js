@@ -29,7 +29,7 @@ export function renderHome() {
                     <!-- Profile photo -->
                     <div class="animate-fade-up flex justify-center mb-8">
                         <div class="profile-ring">
-                            <img src="/public/img/foto.jpeg" alt="Juan José Maldonado"
+                            <img src="/img/foto.jpeg" alt="Juan José Maldonado"
                                 class="w-32 h-32 rounded-full object-cover border-4 border-violet-600/50 shadow-2xl shadow-violet-900/50 animate-pulse-glow">
                         </div>
                     </div>
