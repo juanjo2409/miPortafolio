@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan José Maldonado | Portfolio</title>
+  <script>
+    // SPA Routing fix for GitHub Pages
+    // When GitHub Pages returns 404, this script saves the current URL
+    // and redirects to the root so the SPA router can handle it.
+    var path = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+    // Redirect to index with the path encoded as a query param
+    var redirect = window.location.origin + '/?p=' + encodeURIComponent(path + search + hash);
+    window.location.replace(redirect);
+  </script>
+</head>
+<body></body>
+</html>
