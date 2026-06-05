@@ -202,7 +202,14 @@ export function renderHome() {
                                 <div class="h-12 w-12 rounded-xl bg-violet-500/15 flex items-center justify-center text-xl flex-shrink-0">📧</div>
                                 <div>
                                     <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Email</p>
-                                    <p class="text-slate-200 font-semibold">juanjo2409@gmail.com</p>
+                                    <a href="mailto:juanjosemn160@gmail.com" class="text-slate-200 font-semibold hover:text-violet-400 transition-colors">juanjosemn160@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-violet-500/40 transition-all">
+                                <div class="h-12 w-12 rounded-xl bg-cyan-500/15 flex items-center justify-center text-xl flex-shrink-0">📞</div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Teléfono</p>
+                                    <a href="tel:+573022955108" class="text-slate-200 font-semibold hover:text-violet-400 transition-colors">+57 302 295 5108</a>
                                 </div>
                             </div>
                             <div class="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-violet-500/40 transition-all">
@@ -213,13 +220,6 @@ export function renderHome() {
                                        class="text-violet-400 font-semibold hover:text-violet-300 transition-colors">
                                         github.com/juanjo2409
                                     </a>
-                                </div>
-                            </div>
-                            <div class="glass-card rounded-2xl p-6 flex items-center gap-4 hover:border-violet-500/40 transition-all">
-                                <div class="h-12 w-12 rounded-xl bg-cyan-500/15 flex items-center justify-center text-xl flex-shrink-0">📍</div>
-                                <div>
-                                    <p class="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Ubicación</p>
-                                    <p class="text-slate-200 font-semibold">Colombia 🇨🇴</p>
                                 </div>
                             </div>
                         </div>

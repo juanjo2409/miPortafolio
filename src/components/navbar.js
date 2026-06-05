@@ -74,14 +74,60 @@ export function setupNavbar() {
 
 export function footerHtml() {
     return `
-    <footer class="border-t border-violet-500/15 mt-24">
-        <div class="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-            <a href="#inicio" class="flex items-center gap-2 group">
-                <div class="h-8 w-8 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-700 flex items-center justify-center text-white font-black text-sm">JM</div>
-                <span class="font-black text-white">Juan<span class="gradient-text">José</span><span class="text-violet-400">.</span></span>
-            </a>
-            <p class="text-slate-500 text-sm">Construido con ❤️ usando <span class="text-violet-400 font-semibold">Vite + Tailwind CSS</span></p>
-            <p class="text-slate-600 text-sm">© 2026 Juan José Maldonado</p>
+    <footer class="border-t border-violet-500/10 bg-slate-950/20 mt-24">
+        <div class="mx-auto max-w-7xl px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-violet-500/10">
+                
+                <!-- Col 1: Logo & Tagline -->
+                <div class="space-y-4">
+                    <a href="#inicio" class="flex items-center gap-2 group">
+                        <div class="h-8 w-8 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-700 flex items-center justify-center text-white font-black text-sm shadow-md group-hover:shadow-violet-500/30 transition-all duration-300">JM</div>
+                        <span class="font-black text-white text-lg">Juan<span class="gradient-text">José</span><span class="text-violet-400">.</span></span>
+                    </a>
+                    <p class="text-slate-400 text-sm max-w-xs leading-relaxed">
+                        Desarrollador de software Full Stack especializado en la creación de aplicaciones web modernas, eficientes e interactivas.
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Navegación</h4>
+                    <div class="flex flex-col gap-2">
+                        <a href="#inicio" class="text-slate-400 hover:text-violet-400 text-sm transition-colors w-max">Inicio</a>
+                        <a href="#sobre" class="text-slate-400 hover:text-violet-400 text-sm transition-colors w-max">Sobre mí</a>
+                        <a href="#proyectos" class="text-slate-400 hover:text-violet-400 text-sm transition-colors w-max">Proyectos</a>
+                        <a href="#contacto" class="text-slate-400 hover:text-violet-400 text-sm transition-colors w-max">Contacto</a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-sm tracking-wide uppercase">Contacto</h4>
+                    <div class="space-y-2 text-sm text-slate-400">
+                        <p class="flex items-center gap-2">
+                            <span class="text-base">📧</span>
+                            <a href="mailto:juanjosemn160@gmail.com" class="hover:text-violet-400 transition-colors">juanjosemn160@gmail.com</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <span class="text-base">📞</span>
+                            <a href="tel:+573022955108" class="hover:text-violet-400 transition-colors">+57 302 295 5108</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <span class="text-base">📍</span>
+                            <span>Colombia 🇨🇴</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-slate-500 text-xs">© 2026 Juan José Maldonado. Todos los derechos reservados.</p>
+                <div class="flex items-center gap-4 text-xs text-slate-500">
+                    <span>Construido con 💻 usando Vite + Tailwind CSS</span>
+                </div>
+            </div>
         </div>
     </footer>
     `;
